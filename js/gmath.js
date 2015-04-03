@@ -1,3 +1,5 @@
+// gmath.js
+// collection of constants, functions and objects useful for game math operations
 
 var DTOR = Math.PI / 180;
 var RTOD = 180 / Math.PI;
@@ -18,6 +20,9 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/*
+    2d vector object
+*/
 Vec2 = function(x, y) {
     this.x = (x == undefined) ? 0: x;
     this.y = (y == undefined) ? 0: y;
@@ -84,7 +89,9 @@ Vec2.prototype.toString = function() {
     return( this.x + ", " + this.y );
 }
 
-// 2d rect for ROI and collision detection
+/*
+    2d rect object for ROI and collision detection
+*/
 Rect = function(x, y, wd, ht) {
     this.min = new Vec2(x, y);
     this.size = new Vec2(wd, ht);

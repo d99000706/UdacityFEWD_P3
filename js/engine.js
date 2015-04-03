@@ -114,10 +114,10 @@ var Player = function(pos, vel, imageName, roiString) {
     // LUT of user input movement amounts
     // player roi not same size as background tile roi so use bg size for movement
     this. deltaList = {
-        "left"  : new Vec2(-this.bgTileRect.size.x/2, 0),
-        "right" : new Vec2(this.bgTileRect.size.x/2, 0),
-        "up"    : new Vec2(0, -this.bgTileRect.size.y/2),
-        "down"  : new Vec2(0,  this.bgTileRect.size.y/2)
+        "left"  : new Vec2(-this.bgTileRect.size.x, 0),
+        "right" : new Vec2(this.bgTileRect.size.x, 0),
+        "up"    : new Vec2(0, -this.bgTileRect.size.y),
+        "down"  : new Vec2(0,  this.bgTileRect.size.y)
     };
 }
 Player.prototype = Object.create(BaseEntity.prototype);
